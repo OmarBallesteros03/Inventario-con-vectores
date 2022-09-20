@@ -1,13 +1,12 @@
 let inventario1 = new Inventario();
 
-document.getElementById("guardar").addEventListener("click",()=>{
-    const nombre = document.getElementById("pName").value
-    const codigo = document.getElementById("pCode").value
-    const cantidad = document.getElementById("pAmount").value
-    const costo = document.getElementById("pCosto").value
-})
+const guardar=document.getElementById("guardar");
+guardar.addEventListener('click',()=>{
+    let nombre=document.getElementById("pName").value;
+    let codigo = document.getElementById("pCode").value;
+    let cantidad = document.getElementById("pAmount").value;
+    let costo = document.getElementById("pCosto").value;
 
-const btnAdd=document.getElementById("guardar");
-btnAdd:addEventListener('click',()=>{
-
+    let pNuevo = new Producto(nombre, codigo, cantidad, costo);
+    inventario1.agregarProducto(pNuevo);
 })
