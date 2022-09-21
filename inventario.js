@@ -8,18 +8,19 @@ class Inventario{
     }
 
     eliminarProducto(code){
-        this.inventario.forEach((producto, i) => {
-            if(code === producto.getCode())
+        for(let i = 0; i < this.inventario.length;i++){
+            if(code === this.inventario[i].getCode)
             {
                 for(let j = i; j < this.inventario.length; j++)
                 {
                     producto[j] = producto[j+1];
                 }
-            this.inventario.pop(); 
+            this.inventario.pop();
+            alert("Producto eliminado"); 
             } else{
                 return null;
             }
-        })
+        }
         
     }
 
