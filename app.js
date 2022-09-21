@@ -10,3 +10,13 @@ guardar.addEventListener('click',()=>{
     let pNuevo = new Producto(nombre, codigo, cantidad, costo);
     inventario1.agregarProducto(pNuevo);
 })
+
+const eliminar=document.getElementById("eliminar");
+eliminar.addEventListener('click',()=>{
+    inventario1.eliminarProducto()
+})
+
+const buscar=document.getElementById("buscar");
+buscar.addEventListener('click',()=>{
+    inventario1.buscar()
+})

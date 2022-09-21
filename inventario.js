@@ -24,11 +24,11 @@ class Inventario{
     }
 
     buscar(code){
-        this.inventario.forEach((producto) => {
-            if(code === producto.getCode()){
-                return producto;
+        for(let i = 0; i < this.inventario.length; i++){
+            if(code === this.inventario[i].getCode){
+                return this.inventario[i];
             } 
-        });
+        }
         return null; 
     }
 
