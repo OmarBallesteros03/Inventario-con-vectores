@@ -13,10 +13,20 @@ guardar.addEventListener('click',()=>{
 
 const eliminar=document.getElementById("eliminar");
 eliminar.addEventListener('click',()=>{
-    inventario1.eliminarProducto()
+console.log(inventario1.eliminarProducto(document.getElementById("pCode").value));
 })
 
 const buscar=document.getElementById("buscar");
 buscar.addEventListener('click',()=>{
     inventario1.buscar()
+})
+
+const listar=document.getElementById("listar");
+listar.addEventListener('click',()=>{
+    console.log(inventario1.listado())
+})
+
+const listarInverso=document.getElementById("listarInverso");
+listarInverso.addEventListener('click',()=>{
+    console.log(inventario1.listadoInverso())
 })

@@ -34,14 +34,19 @@ class Inventario{
     }
 
     listado(){
-        this.inventario.forEach((producto, i) => {
-            return producto.info();
-        })
+        let lista = "";
+        for(let i = 0; i = this.inventario.length-1; i++){
+            lista += this.inventario[i].info();
+        }
+        return lista;
 
     }
 
     listadoInverso(){
-
+        let listaInversa = "";
+        for(let i = this.inventario.length-1; i >= 0; i--){
+            listaInversa += this.inventario[i].info();
+        }
     }
 
 }
@@ -78,8 +83,3 @@ class Producto{
 }
 
 let inventario = new Inventario()
-
-
-//let res=miInv.buscar(5);
-//if (res=null)
-//console.log("no existe")
